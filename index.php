@@ -3,11 +3,9 @@ header("Content-Type: application/json");
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 
-// Obtener la URL y limpiar los posibles fragmentos
 $requestUri = $_SERVER['REQUEST_URI'];
 $requestPath = parse_url($requestUri, PHP_URL_PATH);
 
-// Eliminar '/practica_6_seguridad_sw' del inicio de la ruta (si existe)
 $requestPath = str_replace("/practica_6_seguridad_sw", "", $requestPath);
 
 // Dividir la ruta
